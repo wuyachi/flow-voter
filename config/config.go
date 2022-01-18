@@ -54,10 +54,9 @@ type PolyConfig struct {
 }
 
 type FlowConfig struct {
-	SideChainId  uint64
-	EventType    string
-	RestURL      []string
-	BlocksToWait uint64
+	SideChainId uint64
+	EventType   string
+	GrpcURL     []string
 }
 
 type ForceConfig struct {

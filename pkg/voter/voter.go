@@ -76,7 +76,7 @@ func (v *Voter) init() (err error) {
 	v.hasher = hasher
 	v.pk = pk
 
-	for _, url := range v.conf.FlowConfig.RestURL {
+	for _, url := range v.conf.FlowConfig.GrpcURL {
 		var c *client.Client
 		c, err = client.New(url, grpc.WithInsecure())
 		if err != nil {
