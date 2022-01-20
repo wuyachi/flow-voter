@@ -22,6 +22,7 @@ package db
 import (
 	"encoding/binary"
 	"errors"
+	"os"
 	"path"
 
 	"github.com/boltdb/bolt"
@@ -44,6 +45,11 @@ func NewBoltDB(dir string) (bdb *BoltDB, err error) {
 		err = errors.New("db dir is empty")
 		return
 	}
+	err = os.MkdirAll(dir, 0777)
+	if err != nil {
+		return
+	}
+
 	filePath := path.Join(dir, "bolt.bin")
 	db, err := bolt.Open(filePath, 0644, &bolt.Options{InitialMmapSize: 500000})
 	if err != nil {

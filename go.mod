@@ -10,7 +10,7 @@ require (
 	github.com/onflow/flow-go-sdk v0.24.0
 	github.com/onflow/flow-go/crypto v0.21.4-0.20211125190211-7b31c986316e
 	github.com/ontio/ontology v1.11.1-0.20200812075204-26cf1fa5dd47
-	github.com/ontio/ontology-crypto v1.0.9
+	github.com/ontio/ontology-crypto v1.2.1
 	github.com/polynetwork/poly v0.0.0-20210112063446-24e3d053e9d6
 	github.com/polynetwork/poly-go-sdk v0.0.0-20210114120411-3dcba035134f
 	github.com/zhiqiangxu/util v0.0.0-20211106085259-3e9495d1d092
@@ -41,7 +41,7 @@ require (
 	github.com/deckarep/golang-set v0.0.0-20180603214616-504e848d77ea // indirect
 	github.com/drand/kyber v1.1.4 // indirect
 	github.com/emirpasic/gods v1.12.0 // indirect
-	github.com/ethereum/go-ethereum v1.9.15 // indirect
+	github.com/ethereum/go-ethereum v1.9.25 // indirect
 	github.com/fxamacker/cbor/v2 v2.3.1-0.20211029162100-5d5d7c3edd41 // indirect
 	github.com/fxamacker/circlehash v0.1.0 // indirect
 	github.com/gcash/bchd v0.16.5 // indirect
@@ -86,7 +86,7 @@ require (
 	github.com/rivo/uniseg v0.2.0 // indirect
 	github.com/rs/zerolog v1.19.0 // indirect
 	github.com/sasha-s/go-deadlock v0.2.1-0.20190427202633-1595213edefa // indirect
-	github.com/shirou/gopsutil v2.20.5-0.20200531151128-663af789c085+incompatible // indirect
+	github.com/shirou/gopsutil v2.20.5+incompatible // indirect
 	github.com/starcoinorg/starcoin-go v0.0.0-20220105024102-530daedc128b // indirect
 	github.com/steakknife/bloomfilter v0.0.0-20180922174646-6819c0d2a570 // indirect
 	github.com/steakknife/hamming v0.0.0-20180906055917-c99c65617cd3 // indirect

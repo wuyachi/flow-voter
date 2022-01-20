@@ -96,6 +96,11 @@ func (v *Voter) init() (err error) {
 
 func (v *Voter) Start(ctx context.Context) {
 
+	err := v.init()
+	if err != nil {
+		log.Fatalf("Voter.init failed:%v", err)
+	}
+
 	var wg sync.WaitGroup
 
 	util.GoFunc(&wg, func() {
@@ -352,6 +357,7 @@ func (v *Voter) monitorPoly(ctx context.Context) {
 			}
 		case <-ctx.Done():
 			log.Info("monitorPoly quiting from signal...")
+			return
 		}
 	}
 }
@@ -368,6 +374,7 @@ func (v *Voter) handleMakeTxEvents(height uint32) (err error) {
 	}
 
 	empty := true
+
 	for _, event := range events {
 		for _, notify := range event.Notify {
 			if notify.ContractAddress == v.conf.PolyConfig.EntranceContractAddress {
@@ -376,6 +383,7 @@ func (v *Voter) handleMakeTxEvents(height uint32) (err error) {
 				if method != "makeProof" {
 					continue
 				}
+
 				if uint64(states[2].(float64)) != v.conf.FlowConfig.SideChainId {
 					continue
 				}
@@ -402,7 +410,7 @@ func (v *Voter) handleMakeTxEvents(height uint32) (err error) {
 				}
 
 				var txHash string
-				txHash, err = v.commitSig(value, sig)
+				txHash, err = v.commitSig(height, value, sig)
 				if err != nil {
 					log.Errorf("sign4Flow failed:%v", err)
 					return
@@ -425,7 +433,7 @@ func (v *Voter) sign4Flow(data []byte) (sig []byte, err error) {
 	return
 }
 
-func (v *Voter) commitSig(subject, sig []byte) (txHash string, err error) {
+func (v *Voter) commitSig(height uint32, subject, sig []byte) (txHash string, err error) {
 
 	hash, err := v.polySdk.Native.Sm.AddSignature(v.conf.FlowConfig.SideChainId, subject, sig, v.signer)
 	if err != nil {
@@ -433,5 +441,6 @@ func (v *Voter) commitSig(subject, sig []byte) (txHash string, err error) {
 	}
 
 	txHash = hash.ToHexString()
+	log.Infof("commitSig, height: %d, txhash: %s", height, txHash)
 	return
 }
