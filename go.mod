@@ -5,10 +5,10 @@ go 1.17
 require (
 	github.com/boltdb/bolt v1.3.1
 	github.com/howeyc/gopass v0.0.0-20190910152052-7cb4b85ec19c
-	github.com/onflow/cadence v0.20.2
-	github.com/onflow/flow-go v0.23.4
+	github.com/onflow/cadence v0.23.3-patch.1
+	github.com/onflow/flow-go v0.21.3
 	github.com/onflow/flow-go-sdk v0.24.0
-	github.com/onflow/flow-go/crypto v0.21.4-0.20211125190211-7b31c986316e
+	//github.com/onflow/flow-go/crypto v0.21.4-0.20211125190211-7b31c986316e
 	github.com/ontio/ontology v1.11.1-0.20200812075204-26cf1fa5dd47
 	github.com/ontio/ontology-crypto v1.2.1
 	github.com/polynetwork/poly v0.0.0-20210112063446-24e3d053e9d6
