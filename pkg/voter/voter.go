@@ -363,7 +363,6 @@ func (v *Voter) monitorPoly(ctx context.Context) {
 }
 
 func (v *Voter) handleMakeTxEvents(height uint32) (err error) {
-
 	hdr, err := v.polySdk.GetHeaderByHeight(height + 1)
 	if err != nil {
 		return
@@ -377,7 +376,7 @@ func (v *Voter) handleMakeTxEvents(height uint32) (err error) {
 
 	for _, event := range events {
 		for _, notify := range event.Notify {
-			if notify.ContractAddress == v.conf.PolyConfig.EntranceContractAddress {
+			if notify.ContractAddress == autils.CrossChainManagerContractAddress.ToHexString() {
 				states := notify.States.([]interface{})
 				method, _ := states[0].(string)
 				if method != "makeProof" {

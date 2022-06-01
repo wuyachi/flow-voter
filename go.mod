@@ -8,7 +8,7 @@ require (
 	github.com/onflow/cadence v0.23.3-patch.1
 	github.com/onflow/flow-go v0.21.3
 	github.com/onflow/flow-go-sdk v0.24.0
-	//github.com/onflow/flow-go/crypto v0.21.4-0.20211125190211-7b31c986316e
+	github.com/onflow/flow-go/crypto v0.21.3
 	github.com/ontio/ontology v1.11.1-0.20200812075204-26cf1fa5dd47
 	github.com/ontio/ontology-crypto v1.2.1
 	github.com/polynetwork/poly v0.0.0-20210112063446-24e3d053e9d6
@@ -43,7 +43,7 @@ require (
 	github.com/emirpasic/gods v1.12.0 // indirect
 	github.com/ethereum/go-ethereum v1.9.25 // indirect
 	github.com/fxamacker/cbor/v2 v2.3.1-0.20211029162100-5d5d7c3edd41 // indirect
-	github.com/fxamacker/circlehash v0.1.0 // indirect
+	github.com/fxamacker/circlehash v0.2.0 // indirect
 	github.com/gcash/bchd v0.16.5 // indirect
 	github.com/gcash/bchlog v0.0.0-20180913005452-b4f036f92fa6 // indirect
 	github.com/gcash/bchutil v0.0.0-20200506001747-c2894cd54b33 // indirect
@@ -72,10 +72,11 @@ require (
 	github.com/mimoo/StrobeGo v0.0.0-20181016162300-f8f6d4d2b643 // indirect
 	github.com/novifinancial/serde-reflection/serde-generate/runtime/golang v0.0.0-20210526181959-1694c58d103e // indirect
 	github.com/olekukonko/tablewriter v0.0.2-0.20190409134802-7e037d187b0c // indirect
-	github.com/onflow/atree v0.1.1 // indirect
+	github.com/onflow/atree v0.2.0 // indirect
 	github.com/onflow/flow/protobuf/go/flow v0.2.3 // indirect
 	github.com/ontio/go-bip32 v0.0.0-20190520025953-d3cea6894a2b // indirect
 	github.com/ontio/ontology-eventbus v0.9.1 // indirect
+	github.com/opentracing/opentracing-go v1.2.0 // indirect
 	github.com/orcaman/concurrent-map v0.0.0-20190826125027-8c72a8bb44f6 // indirect
 	github.com/petermattis/goid v0.0.0-20180202154549-b0b1615b78e5 // indirect
 	github.com/phoreproject/bls v0.0.0-20200525203911-a88a5ae26844 // indirect
@@ -104,7 +105,7 @@ require (
 	github.com/vmihailenco/msgpack/v4 v4.3.11 // indirect
 	github.com/vmihailenco/tagparser v0.1.1 // indirect
 	github.com/x448/float16 v0.8.4 // indirect
-	github.com/zeebo/blake3 v0.2.0 // indirect
+	github.com/zeebo/blake3 v0.2.2 // indirect
 	github.com/zquestz/grab v0.0.0-20190224022517-abcee96e61b1 // indirect
 	go.etcd.io/bbolt v1.3.5 // indirect
 	go.uber.org/atomic v1.9.0 // indirect
